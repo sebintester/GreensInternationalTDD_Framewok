@@ -1,0 +1,36 @@
+package testCases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pageObjects.facebookSignInPage;
+import pageObjects.homePage;
+import pageObjects.signPage;
+import pageObjects.toastPage;
+import testBase.BaseClass;
+
+public class TC_005_FB_AutoSignIn_Valid_data extends BaseClass {
+@Test
+public void verify_FB_AutoSignIn() throws Throwable
+{
+	logger.info("*****starting TC_005_FB_AutoSignIn_Valid_data*****");
+	
+	homePage hp=new homePage(driver);
+	hp.clickSignIn();
+	signPage sip=new signPage(driver);
+	sip.clickSigninWithFacebook();
+	facebookSignInPage fpg=new facebookSignInPage(driver);
+	fpg.setEmail("testerrllp1@gmail.com");
+	fpg.setPswd("testerrexav");
+	fpg.clickLogIn();
+	Thread.sleep(5000);
+	toastPage tp=new toastPage(driver);
+	String st = tp.getToastMsg();
+	System.out.println(st);
+//	String st2="Login successfully!";
+	String st2="pro";
+	Assert.assertEquals(st,st2);
+
+	logger.info("*****finishing TC_005_FB_AutoSignIn_Valid_data*****");
+}
+}
