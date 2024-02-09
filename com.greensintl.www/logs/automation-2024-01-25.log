@@ -1,0 +1,42 @@
+11:33:16.598 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:16.607 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:33:16.611 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+11:33:16.639 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:33:17.325 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:17.326 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:33:17.329 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+11:33:17.330 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:33:17.509 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - clicked on signin
+11:33:19.568 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:19.570 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:33:19.571 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+11:33:19.573 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:33:19.600 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - validating expected message
+11:33:19.601 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - test is passed
+11:33:19.602 [main] DEBUG testCases.TC_003_Email_Sign_In_Valid - application logs end
+11:33:19.602 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - *****finishing TC_003_Email_Sign_In_ValidTest*****
+11:33:23.591 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - *****starting TC_003_Email_Sign_In_ValidTest*****
+11:33:23.591 [main] DEBUG testCases.TC_003_Email_Sign_In_Valid - application logss start
+11:33:25.079 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - Entering customer details
+11:33:25.087 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:25.088 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:33:25.089 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+11:33:25.091 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:33:25.256 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:25.256 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:33:25.257 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+11:33:25.258 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:33:25.482 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - clicked on signin
+11:33:27.649 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:27.651 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:33:27.652 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+11:33:27.654 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:33:27.687 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - validating expected message
+11:33:27.687 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - test is passed
+11:33:27.687 [main] DEBUG testCases.TC_003_Email_Sign_In_Valid - application logs end
+11:33:27.687 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - *****finishing TC_003_Email_Sign_In_ValidTest*****
+11:33:35.665 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - *****starting TC_003_Email_Sign_In_ValidTest*****
+11:33:35.665 [main] DEBUG testCases.TC_003_Email_Sign_In_Valid - application logss start
+11:33:36.942 [main] INFO  testCases.TC_003_Email_Sign_In_Valid - Entering customer details
+11:33:36.946 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:33:36.947 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels

@@ -1,5 +1,0 @@
-package pageObjects;
-
-public class createAccountCompany extends basePage {
-
-}

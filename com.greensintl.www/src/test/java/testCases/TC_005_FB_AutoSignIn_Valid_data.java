@@ -11,7 +11,7 @@ import pageObjects.toastPage;
 import testBase.BaseClass;
 
 public class TC_005_FB_AutoSignIn_Valid_data extends BaseClass {
-@Test
+@Test(groups = {"regression","master"})
 public void verify_FB_AutoSignIn() throws Throwable
 {
 

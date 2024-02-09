@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_006_FB_AutoSignIn_Invalid_data">
+      <class name="testCases.TC_001_Gmail_AutoSignin_valid_data">
         <methods>
-          <include name="verify_FB_AutoSignIn_Invalid_data"/>
           <include name="tearDown"/>
+          <include name="verify_Gmail_AutosignIn_valid"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC_006_FB_AutoSignIn_Invalid_data -->
+      </class> <!-- testCases.TC_001_Gmail_AutoSignin_valid_data -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

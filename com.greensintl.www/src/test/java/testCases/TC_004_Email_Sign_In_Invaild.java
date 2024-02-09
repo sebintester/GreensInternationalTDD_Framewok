@@ -12,7 +12,7 @@ import pageObjects.toastPage;
 import testBase.BaseClass;
 
 public class TC_004_Email_Sign_In_Invaild extends BaseClass {
-	@Test
+	@Test(groups = "master")
 	public void verify_Email_Login_Invalid() throws Throwable {
 		try {
 			homePage hp = new homePage(driver);
