@@ -35,8 +35,10 @@ public void setup(String os, String br) throws IOException {
 	
 	//loading log4j2 file	
 	logger=LogManager.getLogger(this.getClass());    
-		
-	//launching browser based condition
+	
+	
+	
+	//launching browser based condition - locally
 	switch (br.toLowerCase()) {
 	case "chrome":driver=new ChromeDriver();break;
 	case "edge":driver=new EdgeDriver();break;
@@ -61,7 +63,6 @@ public void setup(String os, String br) throws IOException {
 	}
 	public String captureScreen(String tname) throws IOException {
 
-//		String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 				
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;

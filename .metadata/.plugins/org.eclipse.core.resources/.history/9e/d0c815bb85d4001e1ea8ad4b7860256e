@@ -1,0 +1,49 @@
+package practi;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Arrays;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ttt2 {
+public static void main(String[] args) throws EncryptedDocumentException, IOException 
+{
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get("https://react.greens-intl.ae/admin/catalogue/manage/");
+    FileInputStream fis=new FileInputStream("./src/test/resources/product additoin.xlsx");
+    Workbook wb=WorkbookFactory.create(fis);
+    Sheet sh=wb.getSheet("Sheet1");
+    int numofrows=sh.getLastRowNum();
+    System.out.println(numofrows);
+    int numofcols=sh.getRow(0).getLastCellNum();
+    System.out.println(numofcols);
+    String value[][]=new String[numofrows][numofcols];
+    System.out.println("******");
+	for(int i=0;i<numofrows;i++)
+	{
+		for(int j=0;j<numofcols;j++)
+		{
+			DataFormatter df=new DataFormatter();
+			value[i][j]=df.formatCellValue(sh.getRow(i+1).getCell(j));
+		}
+		System.out.println(Arrays.deepToString(value));
+	}
+	wb.close();
+	fis.close();
+
+    
+	
+    driver.close();
+}
+}

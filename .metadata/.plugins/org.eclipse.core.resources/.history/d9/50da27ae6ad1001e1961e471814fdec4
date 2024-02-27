@@ -1,0 +1,26 @@
+package practi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class prpra {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://react.greens-intl.ae/admin/catalogue/manage/");
+		driver.findElement(By.xpath("//input[@placeholder='Product Name']")).sendKeys("a");
+		driver.findElement(By.xpath("//textarea[@name='prd_description']")).sendKeys("b");
+		WebElement ele = driver.findElement(By.xpath("//button[@data-slot='trigger'][1]"));
+//		Select s= new Select(ele);
+//		s.selectByIndex(0);
+		ele.click();
+		
+		
+	}
+
+}

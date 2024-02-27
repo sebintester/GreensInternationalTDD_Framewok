@@ -1,0 +1,86 @@
+package practi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ttt2 {
+public static void main(String[] args) {
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver=new ChromeDriver();
+	WebDriverWait wait=new WebDriverWait(driver,java.time.Duration.ofSeconds(10));
+	driver.manage().window().maximize();
+	driver.get("https://react.greens-intl.ae/admin/catalogue/manage/");
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[3]"))).click();
+	  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='tag1']"))).click();
+
+      // Using explicit wait for input field and date selection
+      WebElement dateInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Select Date']")));
+      dateInput.click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@aria-label='Choose Thursday, February 29th, 2024']"))).click();
+
+      // Clicking on other elements with explicit waits
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[normalize-space()='Show expiry on dashboard']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[4]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Returnable']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[5]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='category1']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[5]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[6]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Martellato']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[7]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Piece']"))).click();
+
+      // Entering text with explicit wait
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//textarea[@name='use_and_care']"))).sendKeys("use");
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Product Name']"))).sendKeys("pro12345");
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//textarea[@name='prd_description']"))).sendKeys("b");
+
+      // Clicking on buttons with explicit wait
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-slot='trigger'][1]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='vat5%']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[2]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dry']"))).click();
+
+      // Entering text with explicit wait
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//textarea[@name='dimensions_and_more_info']"))).sendKeys("dimensions");
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//textarea[@name='shipping_and_returns']"))).sendKeys("shipping");
+
+      // Clicking on buttons with explicit wait
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='custombtn-label']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm']"))).click();
+
+      // Moving to element and entering text with explicit wait
+      WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Price')]")));
+      Actions a = new Actions(driver);
+      a.moveToElement(ele).click().perform();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Price']"))).sendKeys("199");
+
+      // Clicking on elements with explicit waits
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[normalize-space()='Inactive']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='custombtn-label'])[1]"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm']"))).click();
+
+      // Moving to element and entering text with explicit wait
+      WebElement ele2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Inventory']")));
+      Actions a2 = new Actions(driver);
+      a2.moveToElement(ele2).click().perform();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='SKU']"))).sendKeys("121212");
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='EIN Code']"))).sendKeys("12129");
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Item Code']"))).sendKeys("9999");
+
+      // Clicking on buttons with explicit wait
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='custombtn-label']"))).click();
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm']"))).click();
+
+      // Closing the browser
+      driver.close();
+	
+}
+}

@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_001_Gmail_AutoSignin_valid_data">
+      <class name="practi.tttflow">
         <methods>
-          <include name="tearDown"/>
-          <include name="verify_Gmail_AutosignIn_valid"/>
-          <include name="setup"/>
+          <include name="createProduct" invocation-numbers="4"/>
         </methods>
-      </class> <!-- testCases.TC_001_Gmail_AutoSignin_valid_data -->
+      </class> <!-- practi.tttflow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

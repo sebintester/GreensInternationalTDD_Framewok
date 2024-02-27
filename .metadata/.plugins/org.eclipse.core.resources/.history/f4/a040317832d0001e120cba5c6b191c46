@@ -1,0 +1,40 @@
+package practi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class productcre {
+@Test(dataProvider = "proddata")
+public void tes(String ProductName, String Description, String Dimension, String Shipping, String use, double price,int sku, String eincode, int itemcode,int updatestkqty, int minqty, int maxqty ) throws InterruptedException {
+	System.out.println("seb");
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver=new ChromeDriver();
+	driver.get("https://react.greens-intl.ae/admin/");
+	driver.findElement(By.xpath("//p[@content='Products']")).click();
+	Thread.sleep(1000);
+	
+	driver.findElement(By.xpath("//p[@content='Catalog']")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//div[normalize-space()='Create Product']")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//input[@placeholder='Product Name']")).sendKeys("ProductName");
+	driver.findElement(By.xpath("//textarea[@id='react-aria5515227265-:ra:']")).sendKeys("Description");
+	
+	driver.quit();
+}
+@DataProvider(name="proddata")
+public Object[][]getProddata()
+{
+	Object data[][]=new Object[2][2];
+	data[0][0]="a";
+	data[0][1]="a";
+	data[1][0]="a";
+	data[1][1]="a";
+			return data;
+}
+}

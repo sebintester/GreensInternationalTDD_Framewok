@@ -1,0 +1,48 @@
+package practi;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ttt2 {
+public static void main(String[] args) 
+{
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get("https://react.greens-intl.ae/admin/catalogue/manage/");
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-slot='base']/descendant::button[@data-slot='trigger'])[3]"))).click();
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='tag1']"))).click();
+    // Repeating clicks without sleeps, assuming elements are ready or will be
+    // Note: If there's a need to wait for the same element to become clickable again, ensure the page state has updated as expected
+    
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Select Date']"))).click();
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@aria-label='Choose Thursday, February 29th, 2024']"))).click();
+    // Similar waits are applied before interacting with each element
+    
+    // Removing Thread.sleep calls and using explicit waits ensures that the script waits only as long as necessary
+    // Example for clicking an element that becomes visible after a certain action
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[normalize-space()='Show expiry on dashboard']"))).click();
+    
+    // Example for sending keys when input is ready
+    WebElement productName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Product Name']")));
+    productName.sendKeys("pro12345");
+    
+    // For actions requiring mouse movement
+    WebElement priceElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Price')]")));
+    new Actions(driver).moveToElement(priceElement).click().sendKeys("199").perform();
+    
+    // Continue with other interactions, replacing Thread.sleep with appropriate WebDriverWait conditions
+    
+    driver.close();
+}
+}
